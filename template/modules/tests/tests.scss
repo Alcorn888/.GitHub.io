@@ -37,6 +37,7 @@
 		background-size: contain;
 		background-repeat: no-repeat;
 		background-position: center;
+		display: none;
 
 		&:hover{
 			background-image: url(../../../img/controll/testArrowBackHover.png);
@@ -54,6 +55,7 @@
 		background-size: contain;
 		background-repeat: no-repeat;
 		background-position: center;
+		display: none;
 
 		&:hover{
 			background-image: url(../../../img/controll/scrollDownHover.png);
@@ -97,7 +99,7 @@
 			}
 
 			p{
-				font-size: 1.2em;
+				font-size: 0.8em;
 				margin: 0.4% 0;
 
 				&.testName{
@@ -123,7 +125,7 @@
 				    border: 2px solid #c41230;
 				    right: 0;
 					left: 2.1%;
-					top: 7%;
+					top: 6%;
 					width: 58.7%;
 					bottom: inherit;
 				}
@@ -203,7 +205,7 @@
 					font-size: 3em;
 					font-weight: 300;
 				}
-			    padding-top: 12%;
+			    padding-top: 5%;
 			    text-align: center;
 
 			    .imgContainer{
@@ -256,7 +258,7 @@
 					    padding: 0 5%;
 					    text-align: left;
 				        margin-left: 15%;
-					    height: 365px;
+					    height: 100%;
 					    width: 75%;
 					    background-color: rgba(0,0,0,0.5);
 					    font-size: 14px;
@@ -484,10 +486,6 @@
   				}
   			}
   		}
-
-		#delphi, #athens, #korfu, #crete{
-			/*height: 3072px;*/
-		};
 		#illustrationNature, #illustrationStyle, #illustrationText, #illustrationDetail{
 			/*height: 2304px;*/
 
@@ -503,9 +501,6 @@
 				    }
 				}
 			}
-		};
-		#fortunePeter, #euroDressPeter, #SaintPetersburg, #deathPeter{
-			/*height: 3072px;*/
 		};
 
 		>div.finishTest{
@@ -527,9 +522,6 @@
   		>div{
   			section{
 		  		font-size: 0.7em;
-  				&.questions{
-  					padding-top: 0%;
-  				}
   			}
 
   			&.finishTest ul {
@@ -571,9 +563,6 @@
 				    }
 				}
 			}
-		};
-		#fortunePeter, #euroDressPeter, #SaintPetersburg, #deathPeter{
-			/*height: 2645px;*/
 		};
 
 		>div.finishTest{

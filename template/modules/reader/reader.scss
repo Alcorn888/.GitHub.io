@@ -152,24 +152,16 @@
 			list-style: none;
 
 			.active{
-                &:before {
-                  content: '';
-                  position: absolute;
-                  top: 23px;
-                  display: block;
-                  border-top: 2px solid #c41230;
-                  left: 0;
-                  right: 0;
-                }
+				img{
+					border-bottom: 2px solid #c41230;
+					height: 25px;
+				}
 			}
-
-
 
 			li{
 				float: left;
 				margin:0 10px;
 				cursor: pointer;
-                position: relative;
 
 				@media screen and (max-height: 768px){
 					    margin: 0 5px;

@@ -154,9 +154,9 @@
 			}
 		}
 		.rightSide {
-			white-space: nowrap;
-			box-sizing: border-box;
-			.selectSection{
+				white-space: nowrap;
+				box-sizing: border-box;
+				.selectSection{
 				display: none;
 				position: absolute;
 			    bottom: 103px;
@@ -168,7 +168,7 @@
 				background-image: url(../../../img/controll/plashka.png);
 				background-repeat: no-repeat;
 				&.reloadButton{
-					right: 342px;
+					right: 278px;
 					display: block;
 				}
 				&.turnOfSound{

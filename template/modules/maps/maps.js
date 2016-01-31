@@ -24,6 +24,8 @@ define({
 		if(mapName === 'antiq'){
 			self.animateClouds();
 		}
+		
+		$(document).setPoints('setProportion');
 	},
 
 	loadMap : function(mapName){
