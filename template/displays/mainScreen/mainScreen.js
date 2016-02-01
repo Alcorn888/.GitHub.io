@@ -28,24 +28,26 @@ define({
 	},
 	startVideo: function(){
 		var self = this;
-		var video = document.getElementById('video_background');
-		var closeVideo = document.getElementById('closeVideo');
-		var scene = document.getElementById('scene');
+		var video = this.content.find('#video_background');
+		var closeVideo = this.content.find('#closeVideo');
+		var scene = this.content.find('#scene');
 		$(closeVideo).on('click', function(){
-			scene.style.display = "block";
+			$(scene).css("display" ,"block");
 			video.remove();
 			closeVideo.remove();
 			self.animate();
+			$(closeVideo).off('click');
 		});
 
-		video.play();
+		$(video)[0].play();
 		setTimeout(function(){
-			scene.style.display = "block";
+			$(scene).css("display" ,"block");
 			self.animate();
 		},20000);
 		setTimeout(function(){
-			closeVideo.remove();
-			video.remove();
+			$(closeVideo).remove();
+			$(video)[0].remove();
+			self.off('Preload:End', self.startVideo);
 		},24000);
 	},
 	animate: function(){

@@ -177,4 +177,16 @@ ul.accordion {
 	ul.accordion > li > p {
 		font-size:1.3em;
 	}
+	ul.accordion > li {
+		width:78px;
+		background-size:40px 15px;
+		background-position:17px 5%;
+	}
+	ul.accordion li.active {
+		width:calc(100% - 156px);
+		background-position:17px 5%;
+	}
+	ul.accordion li div.image {
+		margin-left:75px;
+	}
 }
