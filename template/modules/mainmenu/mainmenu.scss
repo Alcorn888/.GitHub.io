@@ -421,3 +421,15 @@
 		top: 11px;
 	}
 }
+
+@media screen and (max-height:700px) {
+	#menu #mainMenu .rightSide .selectSection {
+		height:auto;
+	}
+	#menu #mainMenu, #menu #mainMenu td button {
+		height:65px;
+	}
+	#menu #mainMenu .leftSide>.icon {
+		padding: 0 26px;
+	}
+}
