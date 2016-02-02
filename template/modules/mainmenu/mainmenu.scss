@@ -341,7 +341,7 @@
 		}
 	}
 }
-@media screen and (max-width:1300px) {
+@media screen and (max-width:1600px) {
     #menu {
         #mainMenu {
             .rightSide {
@@ -363,7 +363,7 @@
             background-size: 53%;
             >p {
                 font-size: 1.3em;
-                bottom: 647px;
+                bottom: 547px;
             }
             &.active {
                 width: calc(100% - 140px);
@@ -419,23 +419,5 @@
 	}
 	#menu #mainMenu .leftSide .leftMenu .menu .container .item.icon:before {
 		top: 11px;
-	}
-}
-
-@media screen and (max-height:700px) {
-	#menu #mainMenu .rightSide .selectSection {
-		height:auto;
-	}
-	#menu #mainMenu, #menu #mainMenu td button {
-		height:65px;
-	}
-	#menu #mainMenu .leftSide>.icon {
-		padding: 0 26px;
-	}
-	#menu {
-		height:86px;
-	}
-	#menu #mainMenu .leftSide .leftMenu {
-		bottom:87px;
 	}
 }

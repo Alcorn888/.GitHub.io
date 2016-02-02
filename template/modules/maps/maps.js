@@ -7,15 +7,13 @@ define({
 		// 	this.buildDonePoints(testName);
 		// });
 
-		self.on('Map:Loaded', function() {
+		return this.mapsHtml;
+	},
+	mapLoaded: function() {
 			this.subscribeMap();
 			this.animatePoints();
 			this.animateShip();
-		});
-
-		return this.mapsHtml;
 	},
-
 	printMap : function (mapName) {
 		var self = this;
 		self.content.find(".maps").removeClass("active");
@@ -52,8 +50,9 @@ define({
 			myStorage.setItem("maps",JSON.stringify(self.maps));
 		};
 		self.mapsHtml.html(page);
-		self.trigger('Map:Loaded');
+		self.mapLoaded();
 		self.subscribeMap();
+		self.buildDonePoints();
 	},
 
 	subscribeMap: function() {
@@ -65,26 +64,28 @@ define({
 	},
 
 
-	buildDonePoints: function(testName){
+	buildDonePoints: function(){
 		var data;
 		var self = this;
 		if(localStorage.tests){
 			data = JSON.parse(localStorage.tests);
 		}else{
-			data = this.tests;
+			data = this.tests.data;
 		}
-		data[testName].questions.forEach(function(item, i){
-			$(self.mapsHtml.find('.' +item.id)).attr('data-id', item.id);
-			if (item.status){
-				$(self.mapsHtml.find('.' +item.id)).addClass("done");
-				$(self.mapsHtml.find('img.' +item.id)).remove();
-				var img = $('<img/>', {
-				    class: item.id,
-				    src: '/img/maps/pointDone.png'
-				});
-				$(img).appendTo(self.mapsHtml.find(".done."+item.id+""));
-				$(self.mapsHtml.find('img.' +item.id)).addClass("done");
-			}
+		_.each(data, function(key){
+			key.questions.forEach(function(item, i){
+				$(self.mapsHtml.find('.' +item.id)).attr('data-id', item.id);
+				if (item.status){
+					$(self.mapsHtml.find('.' +item.id)).addClass("done");
+					$(self.mapsHtml.find('img.' +item.id)).remove();
+					var img = $('<img/>', {
+					    class: item.id,
+					    src: '/img/maps/pointDone.png'
+					});
+					$(img).appendTo(self.mapsHtml.find(".done."+item.id+""));
+					$(self.mapsHtml.find('img.' +item.id)).addClass("done");
+				}
+			});
 		});
 	},
 
