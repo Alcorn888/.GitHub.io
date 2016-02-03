@@ -88,3 +88,9 @@
 		}
 	}
 }
+
+@media screen and (max-width:1600px) {
+	#about {
+		height: calc(100% - 50px);
+	}
+}
