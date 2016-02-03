@@ -59,7 +59,6 @@
 				}
 			}
 
-
 			&:nth-of-type(1) img{
 				opacity: 1;
 			}
@@ -90,6 +89,7 @@
 			&:nth-of-type(10) img{
 				transition: all 2s ease;
 			}
+			
 		}
 
 		nav {
@@ -113,7 +113,7 @@
 				    content: "";
 				    position: absolute;
 				    margin: 0 auto;
-				    width: 256px;
+				    width: 268px;
 				    display: none;
 				    border: 2px solid #000;
 				    left: -60px;

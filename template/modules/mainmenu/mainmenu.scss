@@ -263,7 +263,7 @@
                                     clear: both;
                                     display: block;
                                 }
-                                span {
+                                >span {
                                 	pointer-events:none;
                                     float: left;
                                     text-transform: uppercase;
@@ -276,7 +276,7 @@
                                     width: auto;
                                     margin: 0 0 0 11px;
                                 }
-                                div{
+                                >div{
                                 	pointer-events:none;
                                 }
 
@@ -419,5 +419,11 @@
 	}
 	#menu #mainMenu .leftSide .leftMenu .menu .container .item.icon:before {
 		top: 11px;
+	}
+}
+
+@media screen and (max-width:1600px) {
+	#menu #mainMenu .leftSide .leftMenu {
+		bottom: 50px;
 	}
 }

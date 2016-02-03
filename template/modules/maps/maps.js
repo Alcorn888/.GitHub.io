@@ -10,9 +10,9 @@ define({
 		return this.mapsHtml;
 	},
 	mapLoaded: function() {
-			this.subscribeMap();
-			this.animatePoints();
-			this.animateShip();
+		this.subscribeMap();
+		this.animatePoints();
+		this.animateShip();
 	},
 	printMap : function (mapName) {
 		var self = this;
