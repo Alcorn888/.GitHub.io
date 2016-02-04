@@ -27,7 +27,7 @@ define({
 		        image: 'http://edu.tretyakov.ru/img/controll/progress/med/beginer.jpg'               
 		    },
 	        theme: {
-		        services: 'vkontakte,facebook,twitter',
+		        services: 'vkontakte,twitter',
 		        counter: false,
 		        lang: 'ru',
 		        limit: 3,

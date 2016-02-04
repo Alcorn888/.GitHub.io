@@ -37,7 +37,7 @@ define({
 	subscribeReader: function(pagesLength){
 		var self = this;
 		
-
+		checkArrow();
 //console.log('subscribeReader');
 		//Управление боковыми стрелками. Присваиваем предыдущую и следующую страницу.
 		self.previousPage = self.readerHtml.find('.left').previousPage = 0;
@@ -71,6 +71,7 @@ define({
 			self.readerHtml.find('[data-link='+pageNumber+'],[data-number='+pageNumber+']').toggleClass('active');
 			self.previousPage = pageNumber - 1;
 			self.nextPage = pageNumber + 1;
+			checkArrow(pageNumber);
 		});
 
 		//Обработка событий с боковых стрелок.
@@ -84,6 +85,7 @@ define({
 				self.readerHtml.find('[data-link='+pageNumber+'],[data-number='+pageNumber+']').toggleClass('active');
 				self.previousPage = pageNumber - 1;
 				self.nextPage = pageNumber + 1;
+				checkArrow(pageNumber);
 			}	
 		});
 
@@ -95,7 +97,27 @@ define({
 			self.readerHtml.find('[data-link='+pageNumber+'],[data-number='+pageNumber+']').toggleClass('active');
 			self.previousPage = pageNumber - 1;
 			self.nextPage = pageNumber + 1;
+			checkArrow(pageNumber);
 		});
+
+		function checkArrow(pageNumber) {
+			var left = $('#reader .sliderControl.left');
+			var right = $('#reader .sliderControl.right');
+			pageNumber = pageNumber? pageNumber : 1;
+			if(pageNumber == 1){
+				left.css('display','none');
+				right.css('display','block');
+				console.log("First page");
+			}else if(pageNumber == pagesLength){
+				right.css('display','none');
+				left.css('display','block');
+				console.log("Last page");
+			}else{
+				right.css('display','block');
+				left.css('display','block');
+				console.log("Page Ok");
+			}
+		}
 	}
 
 })

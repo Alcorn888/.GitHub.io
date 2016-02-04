@@ -188,17 +188,25 @@ define({
 
 		this.testsHtml.find('.goNext').on('click',Animate);
 
+		$(window).on('scroll', function(){
+
+        	if((maxHeight - window.pageYOffset) < (currentHeight + 50)){
+        		console.log("Hide");
+	    		self.testsHtml.find('.goNext').off( "click", Animate ).css('display','none');
+        	}else{
+        		console.log("Show");
+        		
+        		if(self.testsHtml.find('.goNext').css('display') == "none"){
+	        		self.testsHtml.find('.goNext').on( "click", Animate ).css('display','block');
+        		}
+        	}
+		});
+
 		function Animate(){
 
 			$("html,body").stop().animate({
 	          scrollTop: currentHeight + window.pageYOffset
 	        }, 500);
-
-	        setTimeout(function(){
-	        	if((maxHeight - window.pageYOffset) < (currentHeight + 150)){
-		    		self.testsHtml.find('.goNext').off( "click", Animate ).css('display','none');
-	        	}
-	        },500);
 		}
 	},
 	checkTestComplite: function(testData, lastTestId,testName){

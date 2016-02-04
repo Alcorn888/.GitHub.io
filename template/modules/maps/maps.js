@@ -3,10 +3,6 @@ define({
 		var self = this;
 		this.loadMap("maps");
 
-		// self.on('Test:Loaded', function(testName) {
-		// 	this.buildDonePoints(testName);
-		// });
-
 		return this.mapsHtml;
 	},
 	mapLoaded: function() {

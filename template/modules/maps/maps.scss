@@ -102,14 +102,14 @@
 
 		.modal-korfu{
 			left: 17%;
-	    top: 65%;
+			top: 65%;
 		}
 
 		.modal-crete{
 			left: 69%;
-	    top: 64%;
+			top: 64%;
 		}
-
+		
 		.map {
 			position: relative;
 			width: 100%;
@@ -123,7 +123,8 @@
 			width:100%;
 			height:100%;
 			background-size:cover;
-		  }
+			background-position:50% 0;
+		}
 		  
 		.set-points {
 			top:0;
@@ -181,6 +182,7 @@
 			opacity: 1;
 		}
 
+		/*
 		.athens{
 			top: 10%;
 			left: 46%;
@@ -200,14 +202,29 @@
 			top: 57%;
 			left: 86%;
 		}
-
-		/*
-		.illustrationNature {
-		    top: 16%;
-			left: 2%;
-		}
 		*/
 		
+		.athens {
+			top: 15.3%;
+			left: 38.9%;
+		}
+
+		.delphi {
+			top: 27.8%;
+			left: 27.5%;
+		}
+
+		.korfu {
+			top: 64.4%;
+			left: 9.8%;
+		}
+
+		.crete {
+			top: 57.2%;
+			left: 81.9%;
+		}
+		
+		/*
 		.illustrationNature {
 			top: 16.5%;
 			left: 2.6%;
@@ -217,29 +234,36 @@
 			top: 17%;
 			left: 24%;
 		}
-
-		/*
-		.illustrationText{
-			top: 2%;
-			left: 45.2%;
-		}
-		*/
 		
 		.illustrationText {
 			top: 4.5%;
 			left: 43%;
 		}
 		
-		/*
-		.illustrationDetail{
-			top: 1%;
+		.illustrationDetail {
+			top: 2.5%;
 			left: 70.5%;
 		}
 		*/
 		
+		.illustrationNature {
+			top: 5%;
+			left: 24%;
+		}
+
+		.illustrationStyle {
+			top: 21%;
+			left: 38.7%;
+		}
+
+		.illustrationText {
+			top: 9.2%;
+			left: 47%;
+		}
+
 		.illustrationDetail {
-			top: 2.5%;
-			left: 70.5%;
+			top: 2.9%;
+			left: 74%;
 		}
 		
 		/*
@@ -310,6 +334,7 @@
 		}
 		*/
 		
+		/*
 		.birthdayPeter{
 			top: 47%;
 			left: 5.5%;
@@ -334,7 +359,33 @@
 			top: 47%;
 			left: 80%;
 		}
+		*/
+		
+		.birthdayPeter {
+			top: 47.2%;
+			left: 9.6%;
+		}
 
+		.fortunePeter {
+			top: 47.2%;
+			left: 25%;
+		}
+
+		.euroDressPeter {
+			top: 47.2%;
+			left: 43.2%;
+		}
+
+		.SaintPetersburg {
+			top: 47.2%;
+			left: 60.5%;
+		}
+
+		.deathPeter {
+			top: 47.2%;
+			left: 80%;
+		}
+		
 		.cloud {
 			position: absolute;
 	   		transition: all 120s ease-in-out;

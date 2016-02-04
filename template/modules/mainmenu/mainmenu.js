@@ -120,19 +120,29 @@ define({
 					self.find("#succesMenuButton").attr('href','www.tretyakovgallery.ru');
 					break;
 				case "aboutButton":
-					this.trigger('Get:About');
+					this.animateAbout();
 					break;
 				default:
 
 			}
-
-			if($(element.target).hasClass("pushed")){
-				$(element.target).removeClass('pushed');
-				self.find(".selectSection").removeClass().addClass("selectSection");
+			if(element.target.nodeName === "IMG"){
+				if($(element.target.parentNode).hasClass("pushed")){
+					$(element.target.parentNode).removeClass('pushed');
+					self.find(".selectSection").removeClass().addClass("selectSection");
+				}else{
+					self.find(".pushed").removeClass('pushed');
+					self.find(".selectSection").removeClass().addClass($(element.target.parentNode).data('id') + " selectSection");
+					$(element.target.parentNode).addClass('pushed');
+				}
 			}else{
-				self.find(".pushed").removeClass('pushed');
-				self.find(".selectSection").removeClass().addClass($(element.target).data('id') + " selectSection");
-				$(element.target).addClass('pushed');
+				if($(element.target).hasClass("pushed")){
+					$(element.target).removeClass('pushed');
+					self.find(".selectSection").removeClass().addClass("selectSection");
+				}else{
+					self.find(".pushed").removeClass('pushed');
+					self.find(".selectSection").removeClass().addClass($(element.target).data('id') + " selectSection");
+					$(element.target).addClass('pushed');
+				}
 			}
 		}
 	},

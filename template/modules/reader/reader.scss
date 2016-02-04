@@ -66,6 +66,19 @@
 				height: 100%;
 				float: right;
 			    position: relative;
+
+			    .imageWrapper{
+				    width: 100%;
+    				.imageTitleCover{
+    					.imageTitle{
+							float: left;
+    					}
+
+    					img{
+							float: right;
+    					}
+    				}
+				}
 			}
 			.leftPage{
 				float: left;
@@ -75,6 +88,15 @@
 
 			    .imageWrapper{
 				    width: 100%;
+    				.imageTitleCover{
+    					.imageTitle{
+							float: right;
+    					}
+
+    					img{
+							float: left;
+    					}
+    				}
 				}
 			}
 			.title{
@@ -138,11 +160,9 @@
 					.imageTitle{
 					    color: #ffffff;
 					    font-weight: 600;
-					    float: left;
 					}
 
 					img{
-						float: right;
 					    margin-top: 1%;
     					height: 60%;
     					cursor: pointer;
